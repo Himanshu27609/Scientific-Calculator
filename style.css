@@ -1,0 +1,78 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: var(--bg-color);
+    transition: background 0.3s;
+}
+
+:root {
+    --light-bg: #ffffff;
+    --dark-bg: #333;
+    --light-text: #000;
+    --dark-text: #fff;
+}
+
+.light-mode {
+    --bg-color: var(--light-bg);
+    --text-color: var(--light-text);
+}
+
+.dark-mode {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+}
+
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    padding: 15px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.display input {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: right;
+    border: none;
+    background: inherit;
+    color: var(--text-color);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: #ccc;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #aaa;
+}
+
+.theme-toggle {
+    margin-bottom: 10px;
+}
+
+.history {
+    text-align: left;
+    margin-top: 15px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 100px;
+    overflow-y: auto;
+}
